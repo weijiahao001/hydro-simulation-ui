@@ -1,0 +1,483 @@
+
+curl -X 'GET' \
+  'http://localhost:8080/hydros/api/v1.0/waterways/50/objects?includeGeometry=true&includeParams=true&includeFeatures=true' \
+  -H 'accept: */*'
+
+
+Response body
+  {
+  "success": true,
+  "data": [
+    {
+      "waterway_id": 50,
+      "object_type": "Channel",
+      "object_id": 1073,
+      "object_code": "CHANNEL-000",
+      "object_name": "渠段0",
+      "geom": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.3974,
+            39.9093
+          ],
+          [
+            116.4074,
+            39.919
+          ]
+        ]
+      },
+      "km_pos": 0,
+      "order_index": 0,
+      "next_object_id": 1074,
+      "child_count": 2,
+      "children": [
+        {
+          "object_type": "CrossSection",
+          "object_id": 1078,
+          "object_code": "两闸三河渠CS-001",
+          "object_name": "渠段0#重点断面#001",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 0,
+          "devices": []
+        },
+        {
+          "object_type": "CrossSection",
+          "object_id": 1079,
+          "object_code": "两闸三河渠CS-002",
+          "object_name": "渠段0#重点断面#002",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 3.33333333333333,
+          "devices": [
+            {
+              "asset_id": 1079,
+              "device_id": "HydroHardware.LevelSensor_SENSOR001",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸1#水位传感器#1",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1079,
+              "device_id": "HydroHardware.FlowSensor_SENSOR001",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸1#流量传感器#1",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "waterway_id": 50,
+      "object_type": "GateStation",
+      "object_id": 1074,
+      "object_code": "STATION-001",
+      "object_name": "倒虹闸1",
+      "geom": {
+        "type": "Point",
+        "coordinates": [
+          116.3974,
+          39.9093
+        ]
+      },
+      "km_pos": 10,
+      "order_index": 1,
+      "next_object_id": 1075,
+      "previous_object_id": 1073,
+      "child_count": 4,
+      "children": [
+        {
+          "object_type": "CrossSection",
+          "object_id": 1079,
+          "object_code": "两闸三河渠CS-002",
+          "object_name": "渠段0#重点断面#002",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 3.33333333333333,
+          "devices": [
+            {
+              "asset_id": 1079,
+              "device_id": "HydroHardware.LevelSensor_SENSOR001",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸1#水位传感器#1",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1079,
+              "device_id": "HydroHardware.FlowSensor_SENSOR001",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸1#流量传感器#1",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "CrossSection",
+          "object_id": 1087,
+          "object_code": "两闸三河渠CS-006",
+          "object_name": "渠段01#重点断面#001",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 11,
+          "devices": [
+            {
+              "asset_id": 1087,
+              "device_id": "HydroHardware.LevelSensor_SENSOR002",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸1#水位传感器#2",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1087,
+              "device_id": "HydroHardware.FlowSensor_SENSOR002",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸1#流量传感器#2",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "Gate",
+          "object_id": 1081,
+          "object_code": "GATE-001",
+          "object_name": "倒虹闸1#节制闸#1",
+          "devices": [
+            {
+              "asset_id": 1081,
+              "device_id": "HydroHardware.WaterGate_GATE001",
+              "device_type": "Gate",
+              "device_name": "倒虹闸1#闸门#1",
+              "metrics_code": "GateOpening",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "Gate",
+          "object_id": 1082,
+          "object_code": "GATE-002",
+          "object_name": "倒虹闸1#节制闸#2",
+          "devices": [
+            {
+              "asset_id": 1082,
+              "device_id": "HydroHardware.WaterGate_GATE002",
+              "device_type": "Gate",
+              "device_name": "倒虹闸1#闸门#2",
+              "metrics_code": "GateOpening",
+              "device_controller_id": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "waterway_id": 50,
+      "object_type": "Channel",
+      "object_id": 1075,
+      "object_code": "CHANNEL-001",
+      "object_name": "渠段01",
+      "geom": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.3974,
+            39.9093
+          ],
+          [
+            116.4074,
+            39.919
+          ]
+        ]
+      },
+      "km_pos": 11,
+      "order_index": 2,
+      "next_object_id": 1076,
+      "previous_object_id": 1074,
+      "child_count": 2,
+      "children": [
+        {
+          "object_type": "CrossSection",
+          "object_id": 1087,
+          "object_code": "两闸三河渠CS-006",
+          "object_name": "渠段01#重点断面#001",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 11,
+          "devices": [
+            {
+              "asset_id": 1087,
+              "device_id": "HydroHardware.LevelSensor_SENSOR002",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸1#水位传感器#2",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1087,
+              "device_id": "HydroHardware.FlowSensor_SENSOR002",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸1#流量传感器#2",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "CrossSection",
+          "object_id": 1088,
+          "object_code": "两闸三河渠CS-007",
+          "object_name": "渠段01#重点断面#002",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 14.3333333333333,
+          "devices": [
+            {
+              "asset_id": 1088,
+              "device_id": "HydroHardware.LevelSensor_SENSOR003",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸2#水位传感器#1",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1088,
+              "device_id": "HydroHardware.FlowSensor_SENSOR003",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸2#流量传感器#1",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "waterway_id": 50,
+      "object_type": "GateStation",
+      "object_id": 1076,
+      "object_code": "STATION-002",
+      "object_name": "倒虹闸2",
+      "geom": {
+        "type": "Point",
+        "coordinates": [
+          116.3974,
+          39.9093
+        ]
+      },
+      "km_pos": 21,
+      "order_index": 3,
+      "next_object_id": 1077,
+      "previous_object_id": 1075,
+      "child_count": 4,
+      "children": [
+        {
+          "object_type": "CrossSection",
+          "object_id": 1088,
+          "object_code": "两闸三河渠CS-007",
+          "object_name": "渠段01#重点断面#002",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 14.3333333333333,
+          "devices": [
+            {
+              "asset_id": 1088,
+              "device_id": "HydroHardware.LevelSensor_SENSOR003",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸2#水位传感器#1",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1088,
+              "device_id": "HydroHardware.FlowSensor_SENSOR003",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸2#流量传感器#1",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "CrossSection",
+          "object_id": 1096,
+          "object_code": "两闸三河渠CS-011",
+          "object_name": "渠段02#重点断面#001",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 22,
+          "devices": [
+            {
+              "asset_id": 1096,
+              "device_id": "HydroHardware.LevelSensor_SENSOR004",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸2#水位传感器#2",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1096,
+              "device_id": "HydroHardware.FlowSensor_SENSOR004",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸2#流量传感器#2",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "Gate",
+          "object_id": 1090,
+          "object_code": "GATE-001",
+          "object_name": "倒虹闸2#节制闸#1",
+          "devices": [
+            {
+              "asset_id": 1090,
+              "device_id": "HydroHardware.WaterGate_GATE003",
+              "device_type": "Gate",
+              "device_name": "倒虹闸2#闸门#1",
+              "metrics_code": "GateOpening",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "Gate",
+          "object_id": 1091,
+          "object_code": "GATE-002",
+          "object_name": "倒虹闸2#节制闸#2",
+          "devices": [
+            {
+              "asset_id": 1091,
+              "device_id": "HydroHardware.WaterGate_GATE004",
+              "device_type": "Gate",
+              "device_name": "倒虹闸2#闸门#2",
+              "metrics_code": "GateOpening",
+              "device_controller_id": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "waterway_id": 50,
+      "object_type": "Channel",
+      "object_id": 1077,
+      "object_code": "CHANNEL-002",
+      "object_name": "渠段02",
+      "geom": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.3974,
+            39.9093
+          ],
+          [
+            116.4074,
+            39.919
+          ]
+        ]
+      },
+      "km_pos": 22,
+      "order_index": 4,
+      "previous_object_id": 1076,
+      "child_count": 2,
+      "children": [
+        {
+          "object_type": "CrossSection",
+          "object_id": 1096,
+          "object_code": "两闸三河渠CS-011",
+          "object_name": "渠段02#重点断面#001",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 22,
+          "devices": [
+            {
+              "asset_id": 1096,
+              "device_id": "HydroHardware.LevelSensor_SENSOR004",
+              "device_type": "SensorWaterLevel",
+              "device_name": "倒虹闸2#水位传感器#2",
+              "metrics_code": "LevelMeasurementValue",
+              "device_controller_id": 1
+            },
+            {
+              "asset_id": 1096,
+              "device_id": "HydroHardware.FlowSensor_SENSOR004",
+              "device_type": "SensorDischarge",
+              "device_name": "倒虹闸2#流量传感器#2",
+              "metrics_code": "FlowMeasurementValue",
+              "device_controller_id": 1
+            }
+          ]
+        },
+        {
+          "object_type": "CrossSection",
+          "object_id": 1097,
+          "object_code": "两闸三河渠CS-012",
+          "object_name": "渠段02#重点断面#002",
+          "geom": {
+            "type": "Point",
+            "coordinates": [
+              116.3974,
+              39.9093
+            ]
+          },
+          "km_pos": 25.3333333333333,
+          "devices": []
+        }
+      ]
+    }
+  ]
+}

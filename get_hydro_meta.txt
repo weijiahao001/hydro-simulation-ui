@@ -1,0 +1,87 @@
+curl -X 'GET' \
+  'http://localhost:8080/hydros/api/v1.0/meta/object_params' \
+  -H 'accept: */*'
+
+  Response body
+  {
+  "success": true,
+  "data": [
+    {
+      "id": 131,
+      "category": "SIMULATION_INIT",
+      "key": "lateral_inflow_discharge",
+      "description": "旁侧入流",
+      "object_type": "Channel"
+    },
+    {
+      "id": 129,
+      "category": "SIMULATION_INIT",
+      "key": "discharge",
+      "description": "流量",
+      "object_type": "CrossSection"
+    },
+    {
+      "id": 115,
+      "category": "GEOMETRIC",
+      "key": "cross_section_geometry",
+      "description": "断面几何点位曲线",
+      "object_type": "CrossSection"
+    },
+    {
+      "id": 112,
+      "category": "GEOMETRIC",
+      "key": "bottom_width",
+      "description": "底宽",
+      "object_type": "CrossSection"
+    },
+    {
+      "id": 124,
+      "category": "GEOMETRIC",
+      "key": "local_loss_coefficient",
+      "description": "局部损失系数",
+      "object_type": "Channel"
+    },
+    {
+      "id": 113,
+      "category": "GEOMETRIC",
+      "key": "side_slope_ratio",
+      "description": "边坡系数",
+      "object_type": "CrossSection"
+    },
+    {
+      "id": 130,
+      "category": "SIMULATION_INIT",
+      "key": "water_level",
+      "description": "水位",
+      "object_type": "CrossSection"
+    },
+    {
+      "id": 119,
+      "category": "GEOMETRIC",
+      "key": "interpolate_number",
+      "description": "插值断面数量",
+      "object_type": "Channel"
+    },
+    {
+      "id": 118,
+      "category": "GEOMETRIC",
+      "key": "roughness_coefficient",
+      "description": "糙率",
+      "object_type": "Channel"
+    },
+    {
+      "id": 111,
+      "category": "GEOMETRIC",
+      "key": "bottom_elevation",
+      "description": "底高程",
+      "object_type": "CrossSection"
+    },
+    {
+      "id": 114,
+      "category": "GEOMETRIC",
+      "key": "min_sectional_area",
+      "description": "最小过流面积",
+      "object_type": "CrossSection"
+    }
+  ]
+}
